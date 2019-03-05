@@ -31,5 +31,13 @@ class JsonManagerTest: XCTestCase {
         let result = jsonManager.parse(data: data)
         XCTAssertNotNil(result)
     }
+    
+    func testParsingInvalidJson() {
+        let jsonManager = JsonManager()
+        let json = "{\"key\" : error\"value\"}"
+        let data = json.data(using: .utf8)!
+        let result = jsonManager.parse(data: data)
+        XCTAssertNil(result)
+    }
 
 }
