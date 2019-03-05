@@ -10,8 +10,15 @@ import UIKit
 
 class AlertManager {
     
-    func alert(title: String?, message: String?, okayHandler: (() -> Void)?) -> UIAlertController {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    var Action = UIAlertAction.self
+    var AlertController = UIAlertController.self
+    
+    func alert(title: String?, message: String?, okayHandler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+        let alertController = AlertController.init(title: title, message: message, preferredStyle: .alert)
+        if let okayHandler = okayHandler {
+            let action = Action.createAction(title: "Ok", style: .default, handler: okayHandler)
+            alertController.addAction(action)
+        }
         return alertController
     }
 }

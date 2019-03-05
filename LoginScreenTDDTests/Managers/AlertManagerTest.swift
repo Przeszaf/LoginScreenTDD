@@ -36,6 +36,16 @@ class AlertManagerTest: XCTestCase {
         XCTAssertEqual(alert.message, "Some message")
     }
     
+    
+    func testReturnsAlertWithOkayHandler() {
+        let alertManager = AlertManager()
+        alertManager.Action = UIAlertActionMock.self
+        alertManager.AlertController = UIAlertControllerMock.self
+        let alert = alertManager.alert(title: nil, message: nil, okayHandler: { (action) in }) as? UIAlertControllerMock
+        let action = alert?.okayAction as? UIAlertActionMock
+        
+        XCTAssertNotNil(action?.handler)
+    }
 
 
 
