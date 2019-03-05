@@ -9,23 +9,19 @@
 import XCTest
 @testable import LoginScreenTDD
 class JsonManagerTest: XCTestCase {
+    var jsonManager: JsonManager!
 
     override func setUp() {
+        jsonManager = JsonManager()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testWithEmptyData() {
-        let jsonManager = JsonManager()
         let result = jsonManager.parse(data: Data())
         XCTAssertNil(result)
     }
     
     func testParsingValidJson() {
-        let jsonManager = JsonManager()
         let json = "{\"key\" : \"value\"}"
         let data = json.data(using: .utf8)!
         let result = jsonManager.parse(data: data)
@@ -33,7 +29,6 @@ class JsonManagerTest: XCTestCase {
     }
     
     func testParsingInvalidJson() {
-        let jsonManager = JsonManager()
         let json = "{\"key\" : error\"value\"}"
         let data = json.data(using: .utf8)!
         let result = jsonManager.parse(data: data)
