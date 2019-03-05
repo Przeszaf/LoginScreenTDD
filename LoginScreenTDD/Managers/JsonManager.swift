@@ -11,6 +11,11 @@ import Foundation
 class JsonManager {
     
     func parse(data: Data) -> [String: Any]? {
-        return nil
+        do {
+            let json = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as? [String : Any]
+            return json
+        } catch {
+            return nil
+        }
     }
 }
