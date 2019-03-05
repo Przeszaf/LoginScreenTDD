@@ -13,8 +13,9 @@
 		0C9DD448222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD446222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld */; };
 		0C9DD44A222EBD9800F95514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9DD449222EBD9800F95514 /* Assets.xcassets */; };
 		0C9DD44D222EBD9800F95514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9DD44B222EBD9800F95514 /* LaunchScreen.storyboard */; };
-		0C9DD458222EBD9900F95514 /* LoginScreenTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD457222EBD9900F95514 /* LoginScreenTDDTests.swift */; };
 		0C9DD463222EBD9900F95514 /* LoginScreenTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD462222EBD9900F95514 /* LoginScreenTDDUITests.swift */; };
+		0C9DD480222EC41C00F95514 /* JsonManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD47F222EC41C00F95514 /* JsonManagerTest.swift */; };
+		0C9DD484222EC47D00F95514 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD483222EC47D00F95514 /* JsonManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +45,12 @@
 		0C9DD44C222EBD9800F95514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9DD44E222EBD9800F95514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9DD453222EBD9900F95514 /* LoginScreenTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C9DD457222EBD9900F95514 /* LoginScreenTDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTDDTests.swift; sourceTree = "<group>"; };
 		0C9DD459222EBD9900F95514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9DD45E222EBD9900F95514 /* LoginScreenTDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenTDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9DD462222EBD9900F95514 /* LoginScreenTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTDDUITests.swift; sourceTree = "<group>"; };
 		0C9DD464222EBD9900F95514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9DD47F222EC41C00F95514 /* JsonManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManagerTest.swift; sourceTree = "<group>"; };
+		0C9DD483222EC47D00F95514 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		0C9DD43E222EBD9700F95514 /* LoginScreenTDD */ = {
 			isa = PBXGroup;
 			children = (
+				0C9DD482222EC47500F95514 /* Managers */,
 				0C9DD43F222EBD9700F95514 /* AppDelegate.swift */,
 				0C9DD441222EBD9700F95514 /* ViewController.swift */,
 				0C9DD443222EBD9700F95514 /* Main.storyboard */,
@@ -113,7 +116,7 @@
 		0C9DD456222EBD9900F95514 /* LoginScreenTDDTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C9DD457222EBD9900F95514 /* LoginScreenTDDTests.swift */,
+				0C9DD47E222EC40C00F95514 /* Managers */,
 				0C9DD459222EBD9900F95514 /* Info.plist */,
 			);
 			path = LoginScreenTDDTests;
@@ -126,6 +129,22 @@
 				0C9DD464222EBD9900F95514 /* Info.plist */,
 			);
 			path = LoginScreenTDDUITests;
+			sourceTree = "<group>";
+		};
+		0C9DD47E222EC40C00F95514 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0C9DD47F222EC41C00F95514 /* JsonManagerTest.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0C9DD482222EC47500F95514 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0C9DD483222EC47D00F95514 /* JsonManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,7 @@
 					};
 					0C9DD452222EBD9900F95514 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 0C9DD43B222EBD9700F95514;
 					};
 					0C9DD45D222EBD9900F95514 = {
@@ -260,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9DD442222EBD9700F95514 /* ViewController.swift in Sources */,
+				0C9DD484222EC47D00F95514 /* JsonManager.swift in Sources */,
 				0C9DD440222EBD9700F95514 /* AppDelegate.swift in Sources */,
 				0C9DD448222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld in Sources */,
 			);
@@ -269,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9DD458222EBD9900F95514 /* LoginScreenTDDTests.swift in Sources */,
+				0C9DD480222EC41C00F95514 /* JsonManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +494,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH34GD9XC3;
 				INFOPLIST_FILE = LoginScreenTDDTests/Info.plist;
@@ -483,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.przeszaf.LoginScreenTDDTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginScreenTDD.app/LoginScreenTDD";
@@ -494,6 +517,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH34GD9XC3;
 				INFOPLIST_FILE = LoginScreenTDDTests/Info.plist;
