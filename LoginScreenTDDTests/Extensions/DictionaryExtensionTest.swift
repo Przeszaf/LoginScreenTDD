@@ -36,5 +36,17 @@ class DictionaryExtensionTest: XCTestCase {
         let result = dict.value(keyPath: "key.key2")
         XCTAssertNotNil(result)
     }
+    
+    func testValueFuncWithTripleDeepDictionary() {
+        let dict: [String: Any] = ["key": ["key2": ["key3": "value"]]]
+        let result = dict.value(keyPath: "key.key2.key3")
+        XCTAssertNotNil(result)
+    }
+    
+    func testValueFuncWithTripleDeepDictionaryNotFullKeypath() {
+        let dict: [String: Any] = ["key": ["key2": ["key3": "value"]]]
+        let result = dict.value(keyPath: "key.key2")
+        XCTAssertNotNil(result)
+    }
 
 }
