@@ -18,32 +18,34 @@ class DictionaryExtensionTest: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    //MARK: - value<T: Any>(keyPath: String) -> T?
 
-    func testValueFuncWithEmptyDictionary() {
+    func testValueFuncEmptyDictionary() {
         let dict: [String: Int] = [:]
         let result: Any? = dict.value(keyPath: "key")
         XCTAssertNil(result)
     }
     
-    func testValueFuncWithSimpleDictionary() {
+    func testValueFuncSimpleDictionary() {
         let dict: [String: Int] = ["key": 1]
         let result: Any? = dict.value(keyPath: "key")
         XCTAssertNotNil(result)
     }
     
-    func testValueFuncWithDoubleDeepDictionary() {
+    func testValueFuncDoubleDeepDictionary() {
         let dict: [String: Any] = ["key": ["key2": "value"]]
         let result: Any? = dict.value(keyPath: "key.key2")
         XCTAssertNotNil(result)
     }
     
-    func testValueFuncWithTripleDeepDictionary() {
+    func testValueFuncTripleDeepDictionary() {
         let dict: [String: Any] = ["key": ["key2": ["key3": "value"]]]
         let result: Any? = dict.value(keyPath: "key.key2.key3")
         XCTAssertNotNil(result)
     }
     
-    func testValueFuncWithTripleDeepDictionaryNotFullKeypath() {
+    func testValueFuncTripleDeepDictionaryNotFullKeypath() {
         let dict: [String: Any] = ["key": ["key2": ["key3": "value"]]]
         let result: Any? = dict.value(keyPath: "key.key2")
         XCTAssertNotNil(result)
@@ -79,6 +81,7 @@ class DictionaryExtensionTest: XCTestCase {
         XCTAssertNotNil(result)
     }
     
+    //MARK: - stringOrStringNumber(keyPath: String) -> String?
     
     func testStringOrStringNumberFuncSimpleDictWithString() {
         let dict: [String: Any] = ["key": "value"]
