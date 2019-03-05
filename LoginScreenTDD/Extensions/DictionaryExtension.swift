@@ -11,6 +11,6 @@ import Foundation
 extension Dictionary where Key == String {
     
     func value(keyPath: String) -> Any? {
-        return nil
+        return self[keyPath]
     }
 }

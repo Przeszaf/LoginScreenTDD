@@ -24,5 +24,11 @@ class DictionaryExtensionTest: XCTestCase {
         let result = dict.value(keyPath: "key")
         XCTAssertNil(result)
     }
+    
+    func testValueFuncWithSimpleDictionary() {
+        let dict: [String: Int] = ["key": 1]
+        let result = dict.value(keyPath: "key")
+        XCTAssertNotNil(result)
+    }
 
 }
