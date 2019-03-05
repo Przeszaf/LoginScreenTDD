@@ -18,6 +18,8 @@
 		0C9DD484222EC47D00F95514 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD483222EC47D00F95514 /* JsonManager.swift */; };
 		0C9DD489222EC7D100F95514 /* DictionaryExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD488222EC7D100F95514 /* DictionaryExtensionTest.swift */; };
 		0C9DD48C222EC88000F95514 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD48B222EC88000F95514 /* DictionaryExtension.swift */; };
+		0C9DD48E222EDEF400F95514 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD48D222EDEF400F95514 /* AlertManager.swift */; };
+		0C9DD490222EDEFD00F95514 /* AlertManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD48F222EDEFD00F95514 /* AlertManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		0C9DD483222EC47D00F95514 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		0C9DD488222EC7D100F95514 /* DictionaryExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionTest.swift; sourceTree = "<group>"; };
 		0C9DD48B222EC88000F95514 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		0C9DD48D222EDEF400F95514 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		0C9DD48F222EDEFD00F95514 /* AlertManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9DD47F222EC41C00F95514 /* JsonManagerTest.swift */,
+				0C9DD48F222EDEFD00F95514 /* AlertManagerTest.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9DD483222EC47D00F95514 /* JsonManager.swift */,
+				0C9DD48D222EDEF400F95514 /* AlertManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 			files = (
 				0C9DD442222EBD9700F95514 /* ViewController.swift in Sources */,
 				0C9DD484222EC47D00F95514 /* JsonManager.swift in Sources */,
+				0C9DD48E222EDEF400F95514 /* AlertManager.swift in Sources */,
 				0C9DD48C222EC88000F95514 /* DictionaryExtension.swift in Sources */,
 				0C9DD440222EBD9700F95514 /* AppDelegate.swift in Sources */,
 				0C9DD448222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld in Sources */,
@@ -313,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9DD490222EDEFD00F95514 /* AlertManagerTest.swift in Sources */,
 				0C9DD480222EC41C00F95514 /* JsonManagerTest.swift in Sources */,
 				0C9DD489222EC7D100F95514 /* DictionaryExtensionTest.swift in Sources */,
 			);
