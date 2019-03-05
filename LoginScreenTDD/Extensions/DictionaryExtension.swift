@@ -10,18 +10,30 @@ import Foundation
 
 extension Dictionary where Key == String {
     
-    func value(keyPath: String) -> Any? {
+    func stringOrStringNumber(keyPath: String) -> String? {
+        if let string: String = value(keyPath: keyPath) {
+            return string
+        } else if let int: Int = value(keyPath: keyPath) {
+            return String(int)
+        } else if let double: Double = value(keyPath: keyPath) {
+            return String(double)
+        }
+        return nil
+    }
+    
+    func value<T: Any>(keyPath: String) -> T? {
         var components = keyPath.split(separator: ".")
         guard let firstComponent = components.first else { return nil }
         let firstComponentString = String(firstComponent)
         if let insideDict = self[firstComponentString] as? [String: Any] {
             components.removeFirst()
             if (components.count == 0) {
-                return firstComponentString
+                return insideDict as? T
             }
             return insideDict.value(keyPath: components.joined(separator: "."))
         } else {
-            return self[firstComponentString]
+            guard self[firstComponentString] != nil else { return nil }
+            return self[firstComponentString] as? T
         }
     }
 }
