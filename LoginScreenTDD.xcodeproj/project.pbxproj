@@ -42,6 +42,7 @@
 		0CD4862B2231B65900C2D478 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CD4862A2231B65800C2D478 /* response.json */; };
 		0CD486322231B8B400C2D478 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486312231B8B400C2D478 /* URLManager.swift */; };
 		0CD486362231B8F800C2D478 /* URLManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486352231B8F800C2D478 /* URLManagerTest.swift */; };
+		0CD486492231B9C700C2D478 /* LoginManagerIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486482231B9C700C2D478 /* LoginManagerIntegrationTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,13 @@
 			remoteInfo = LoginScreenTDD;
 		};
 		0C9DD45F222EBD9900F95514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C9DD434222EBD9700F95514 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C9DD43B222EBD9700F95514;
+			remoteInfo = LoginScreenTDD;
+		};
+		0CD486402231B98D00C2D478 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0C9DD434222EBD9700F95514 /* Project object */;
 			proxyType = 1;
@@ -100,6 +108,9 @@
 		0CD4862A2231B65800C2D478 /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 		0CD486312231B8B400C2D478 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		0CD486352231B8F800C2D478 /* URLManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManagerTest.swift; sourceTree = "<group>"; };
+		0CD4863B2231B98D00C2D478 /* LoginScreenTDDIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenTDDIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CD4863F2231B98D00C2D478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CD486482231B9C700C2D478 /* LoginManagerIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManagerIntegrationTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +135,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CD486382231B98D00C2D478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -133,6 +151,7 @@
 				0C9DD43E222EBD9700F95514 /* LoginScreenTDD */,
 				0C9DD456222EBD9900F95514 /* LoginScreenTDDTests */,
 				0C9DD461222EBD9900F95514 /* LoginScreenTDDUITests */,
+				0CD4863C2231B98D00C2D478 /* LoginScreenTDDIntegrationTests */,
 				0C9DD43D222EBD9700F95514 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,6 +162,7 @@
 				0C9DD43C222EBD9700F95514 /* LoginScreenTDD.app */,
 				0C9DD453222EBD9900F95514 /* LoginScreenTDDTests.xctest */,
 				0C9DD45E222EBD9900F95514 /* LoginScreenTDDUITests.xctest */,
+				0CD4863B2231B98D00C2D478 /* LoginScreenTDDIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +279,23 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		0CD4863C2231B98D00C2D478 /* LoginScreenTDDIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CD486472231B9B400C2D478 /* Managers */,
+				0CD4863F2231B98D00C2D478 /* Info.plist */,
+			);
+			path = LoginScreenTDDIntegrationTests;
+			sourceTree = "<group>";
+		};
+		0CD486472231B9B400C2D478 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0CD486482231B9C700C2D478 /* LoginManagerIntegrationTest.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,6 +352,24 @@
 			productReference = 0C9DD45E222EBD9900F95514 /* LoginScreenTDDUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0CD4863A2231B98D00C2D478 /* LoginScreenTDDIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CD486422231B98D00C2D478 /* Build configuration list for PBXNativeTarget "LoginScreenTDDIntegrationTests" */;
+			buildPhases = (
+				0CD486372231B98D00C2D478 /* Sources */,
+				0CD486382231B98D00C2D478 /* Frameworks */,
+				0CD486392231B98D00C2D478 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CD486412231B98D00C2D478 /* PBXTargetDependency */,
+			);
+			name = LoginScreenTDDIntegrationTests;
+			productName = LoginScreenTDDIntegrationTests;
+			productReference = 0CD4863B2231B98D00C2D478 /* LoginScreenTDDIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -337,6 +392,11 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 0C9DD43B222EBD9700F95514;
 					};
+					0CD4863A2231B98D00C2D478 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = 0C9DD43B222EBD9700F95514;
+					};
 				};
 			};
 			buildConfigurationList = 0C9DD437222EBD9700F95514 /* Build configuration list for PBXProject "LoginScreenTDD" */;
@@ -355,6 +415,7 @@
 				0C9DD43B222EBD9700F95514 /* LoginScreenTDD */,
 				0C9DD452222EBD9900F95514 /* LoginScreenTDDTests */,
 				0C9DD45D222EBD9900F95514 /* LoginScreenTDDUITests */,
+				0CD4863A2231B98D00C2D478 /* LoginScreenTDDIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,6 +440,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0C9DD45C222EBD9900F95514 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CD486392231B98D00C2D478 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,6 +508,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CD486372231B98D00C2D478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD486492231B9C700C2D478 /* LoginManagerIntegrationTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -452,6 +528,11 @@
 			isa = PBXTargetDependency;
 			target = 0C9DD43B222EBD9700F95514 /* LoginScreenTDD */;
 			targetProxy = 0C9DD45F222EBD9900F95514 /* PBXContainerItemProxy */;
+		};
+		0CD486412231B98D00C2D478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C9DD43B222EBD9700F95514 /* LoginScreenTDD */;
+			targetProxy = 0CD486402231B98D00C2D478 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -712,6 +793,49 @@
 			};
 			name = Release;
 		};
+		0CD486432231B98D00C2D478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EH34GD9XC3;
+				INFOPLIST_FILE = LoginScreenTDDIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.przeszaf.LoginScreenTDDIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginScreenTDD.app/LoginScreenTDD";
+			};
+			name = Debug;
+		};
+		0CD486442231B98D00C2D478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EH34GD9XC3;
+				INFOPLIST_FILE = LoginScreenTDDIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.przeszaf.LoginScreenTDDIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginScreenTDD.app/LoginScreenTDD";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -747,6 +871,15 @@
 			buildConfigurations = (
 				0C9DD46E222EBD9900F95514 /* Debug */,
 				0C9DD46F222EBD9900F95514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CD486422231B98D00C2D478 /* Build configuration list for PBXNativeTarget "LoginScreenTDDIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD486432231B98D00C2D478 /* Debug */,
+				0CD486442231B98D00C2D478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
