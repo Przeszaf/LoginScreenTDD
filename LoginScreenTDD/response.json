@@ -1,0 +1,12 @@
+{
+    "companyId": 22846,
+    "userId": 25050,
+    "companyTimeZoneName": "Europe/London",
+    "userTimeZoneName": "Europe/London",
+    "token": {
+        "token":
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjI1MDUwLCJDb21wYW55SWQiOjIyODQ2LCJFeHBpcnlEYXRlIjoiXC9EYXRlKDE1MDc3Njc2ODE4ODkpXC8ifQ.PNM143ErUvcEfxr0c9bS0vD_wMmMrpYdVkk0YLpHLOk",
+        "userId": null
+    },
+    "hasFixedWorkingTimePattern": true
+}
