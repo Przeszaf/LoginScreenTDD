@@ -14,7 +14,8 @@ class LoginManager {
     
     func login(session: URLSessionProtocol, username: String, password: String, completionHandler: @escaping ((Data?, LoginError?) -> Void)) {
         let httpManager = HttpManager()
-        let request = httpManager.createPostRequest(url: URL(string: "https://brighthr-api-uat.azurewebsites.net/api/Account/PostValidateUser")!,
+        let urlManager = URLManager()
+        let request = httpManager.createPostRequest(url: urlManager.loginURL(),
                                                     parameters: [Constants.LoginManager.usernameParameterKey: username, Constants.LoginManager.passwordParameterKey: password],
                                                     httpHeadersArray: Constants.LoginManager.httpHeadersArray)
         httpManager.get(session: session, request: request) { [weak self] (data, response, error)  in
