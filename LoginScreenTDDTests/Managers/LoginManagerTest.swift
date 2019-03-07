@@ -65,4 +65,18 @@ class LoginManagerTest: XCTestCase {
         })
         XCTAssertEqual(receivedError, .unknown)
     }
+    
+    func testLoginSavesToken() {
+        let mockURLSession = URLSessionMock()
+        mockURLSession.mockResponse = HTTPURLResponse(url: URL(string: "MockUrl")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        guard let path = Bundle.main.path(forResource: "response", ofType: "json") else {
+            XCTFail()
+            return
+        }
+        mockURLSession.mockData = try? Data(contentsOf: URL(fileURLWithPath: path))
+        
+        
+        loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error) in })
+        XCTAssertEqual(loginManager.token, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjI1MDUwLCJDb21wYW55SWQiOjIyODQ2LCJFeHBpcnlEYXRlIjoiXC9EYXRlKDE1MDc3Njc2ODE4ODkpXC8ifQ.PNM143ErUvcEfxr0c9bS0vD_wMmMrpYdVkk0YLpHLOk")
+    }
 }
