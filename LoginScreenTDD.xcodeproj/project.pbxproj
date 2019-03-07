@@ -26,6 +26,15 @@
 		0C9DD49C222EEC9600F95514 /* UIAlertControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD492222EE29E00F95514 /* UIAlertControllerMock.swift */; };
 		0C9DD4A9222EF3C700F95514 /* UIAlertActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD4A8222EF3C700F95514 /* UIAlertActionExtension.swift */; };
 		0C9DD4AC222EF77B00F95514 /* UIAlertActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD4A8222EF3C700F95514 /* UIAlertActionExtension.swift */; };
+		0CD4860E2231B46500C2D478 /* HttpManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4860D2231B46500C2D478 /* HttpManagerTest.swift */; };
+		0CD486102231B48100C2D478 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4860F2231B48100C2D478 /* HttpManager.swift */; };
+		0CD486122231B4A000C2D478 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486112231B4A000C2D478 /* URLRequestExtension.swift */; };
+		0CD486142231B4AC00C2D478 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486132231B4AC00C2D478 /* URLSessionExtension.swift */; };
+		0CD486162231B4B900C2D478 /* URLSessionDataTaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486152231B4B900C2D478 /* URLSessionDataTaskExtension.swift */; };
+		0CD486182231B4CA00C2D478 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486172231B4CA00C2D478 /* URLSessionProtocol.swift */; };
+		0CD4861A2231B4D600C2D478 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486192231B4D600C2D478 /* URLSessionDataTaskProtocol.swift */; };
+		0CD4861C2231B4EF00C2D478 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4861B2231B4EF00C2D478 /* URLSessionMock.swift */; };
+		0CD4861E2231B4FB00C2D478 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4861D2231B4FB00C2D478 /* URLSessionDataTaskMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +77,15 @@
 		0C9DD492222EE29E00F95514 /* UIAlertControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerMock.swift; sourceTree = "<group>"; };
 		0C9DD494222EE33E00F95514 /* UIAlertActionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionMock.swift; sourceTree = "<group>"; };
 		0C9DD4A8222EF3C700F95514 /* UIAlertActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtension.swift; sourceTree = "<group>"; };
+		0CD4860D2231B46500C2D478 /* HttpManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManagerTest.swift; sourceTree = "<group>"; };
+		0CD4860F2231B48100C2D478 /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		0CD486112231B4A000C2D478 /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		0CD486132231B4AC00C2D478 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		0CD486152231B4B900C2D478 /* URLSessionDataTaskExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskExtension.swift; sourceTree = "<group>"; };
+		0CD486172231B4CA00C2D478 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		0CD486192231B4D600C2D478 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		0CD4861B2231B4EF00C2D478 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		0CD4861D2231B4FB00C2D478 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9DD47F222EC41C00F95514 /* JsonManagerTest.swift */,
+				0CD4860D2231B46500C2D478 /* HttpManagerTest.swift */,
 				0C9DD48F222EDEFD00F95514 /* AlertManagerTest.swift */,
 			);
 			path = Managers;
@@ -166,6 +185,7 @@
 			children = (
 				0C9DD483222EC47D00F95514 /* JsonManager.swift */,
 				0C9DD48D222EDEF400F95514 /* AlertManager.swift */,
+				0CD4860F2231B48100C2D478 /* HttpManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -183,6 +203,9 @@
 			children = (
 				0C9DD48B222EC88000F95514 /* DictionaryExtension.swift */,
 				0C9DD4A8222EF3C700F95514 /* UIAlertActionExtension.swift */,
+				0CD486112231B4A000C2D478 /* URLRequestExtension.swift */,
+				0CD486132231B4AC00C2D478 /* URLSessionExtension.swift */,
+				0CD486152231B4B900C2D478 /* URLSessionDataTaskExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +215,8 @@
 			children = (
 				0C9DD492222EE29E00F95514 /* UIAlertControllerMock.swift */,
 				0C9DD494222EE33E00F95514 /* UIAlertActionMock.swift */,
+				0CD4861B2231B4EF00C2D478 /* URLSessionMock.swift */,
+				0CD4861D2231B4FB00C2D478 /* URLSessionDataTaskMock.swift */,
 			);
 			path = MockFiles;
 			sourceTree = "<group>";
@@ -199,6 +224,8 @@
 		0C9DD496222EE43000F95514 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0CD486172231B4CA00C2D478 /* URLSessionProtocol.swift */,
+				0CD486192231B4D600C2D478 /* URLSessionDataTaskProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -335,15 +362,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD486182231B4CA00C2D478 /* URLSessionProtocol.swift in Sources */,
 				0C9DD49B222EEC9300F95514 /* UIAlertActionMock.swift in Sources */,
+				0CD486162231B4B900C2D478 /* URLSessionDataTaskExtension.swift in Sources */,
+				0CD486102231B48100C2D478 /* HttpManager.swift in Sources */,
 				0C9DD4A9222EF3C700F95514 /* UIAlertActionExtension.swift in Sources */,
 				0C9DD442222EBD9700F95514 /* ViewController.swift in Sources */,
 				0C9DD49C222EEC9600F95514 /* UIAlertControllerMock.swift in Sources */,
 				0C9DD484222EC47D00F95514 /* JsonManager.swift in Sources */,
 				0C9DD48E222EDEF400F95514 /* AlertManager.swift in Sources */,
 				0C9DD48C222EC88000F95514 /* DictionaryExtension.swift in Sources */,
+				0CD486142231B4AC00C2D478 /* URLSessionExtension.swift in Sources */,
 				0C9DD440222EBD9700F95514 /* AppDelegate.swift in Sources */,
+				0CD486122231B4A000C2D478 /* URLRequestExtension.swift in Sources */,
 				0C9DD448222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld in Sources */,
+				0CD4861A2231B4D600C2D478 /* URLSessionDataTaskProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,12 +384,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD4861C2231B4EF00C2D478 /* URLSessionMock.swift in Sources */,
 				0C9DD490222EDEFD00F95514 /* AlertManagerTest.swift in Sources */,
+				0CD4860E2231B46500C2D478 /* HttpManagerTest.swift in Sources */,
 				0C9DD495222EE33E00F95514 /* UIAlertActionMock.swift in Sources */,
 				0C9DD480222EC41C00F95514 /* JsonManagerTest.swift in Sources */,
 				0C9DD493222EE29E00F95514 /* UIAlertControllerMock.swift in Sources */,
 				0C9DD4AC222EF77B00F95514 /* UIAlertActionExtension.swift in Sources */,
 				0C9DD489222EC7D100F95514 /* DictionaryExtensionTest.swift in Sources */,
+				0CD4861E2231B4FB00C2D478 /* URLSessionDataTaskMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
