@@ -8,20 +8,15 @@
 
 import Foundation
 
-class LoginManager {
+class LoginManager: Manager {
     
     var token: String?
     
     func login(session: URLSessionProtocol, username: String, password: String, completionHandler: @escaping ((Data?, LoginError?) -> Void)) {
-        let httpManager = HttpManager()
-        let urlManager = URLManager()
-        let request = httpManager.createPostRequest(url: urlManager.loginURL(),
+        let request = managerContext.httpManager.createPostRequest(url: managerContext.urlManager.loginURL(),
                                                     parameters: [Constants.LoginManager.usernameParameterKey: username, Constants.LoginManager.passwordParameterKey: password],
                                                     httpHeadersArray: Constants.LoginManager.httpHeadersArray)
-        httpManager.get(session: session, request: request) { [weak self] (data, response, error)  in
-            if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                self?.getToken(data: data)
-            }
+        managerContext.httpManager.get(session: session, request: request) { (data, response, error)  in
             if let response = response as? HTTPURLResponse {
                 completionHandler(data, LoginError.check(errorCode: response.statusCode))
             } else if let error = error as? LoginError {
@@ -32,10 +27,10 @@ class LoginManager {
         }
     }
     
-    private func getToken(data: Data) {
-        let jsonManager = JsonManager()
-        guard let json = jsonManager.parse(data: data) else { return }
-        token = json.value(keyPath: "token.token")
+    func saveToken(data: Data) {
+        guard let json = managerContext.jsonManager.parse(data: data) else { return }
+        let value: String? = json.value(keyPath: "token.token")
+        token = value
     }
     
     

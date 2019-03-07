@@ -8,7 +8,7 @@
 
 import Foundation
 
-class JsonManager {
+class JsonManager: Manager {
     
     func parse(data: Data) -> [String: Any]? {
         do {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class URLManager {
+class URLManager: Manager {
     func loginURL() -> URL {
         return URL(string: "https://brighthr-api-uat.azurewebsites.net/api/Account/PostValidateUser")!
     }

@@ -11,10 +11,10 @@ import XCTest
 @testable import LoginScreenTDD
 
 class LoginManagerIntegrationTest: XCTestCase {
-    var loginManager: LoginManager!
+    var managerContext: ManagerContext!
     
     override func setUp() {
-        loginManager = LoginManager()
+        managerContext = ManagerContext()
     }
     
     override func tearDown() {
@@ -24,7 +24,7 @@ class LoginManagerIntegrationTest: XCTestCase {
     func testWrongCredentials() {
         let urlExpectation = expectation(description: "URL Response")
         var receivedError: LoginError?
-        loginManager.login(session: URLSession.shared, username: "user", password: "password") { (data, error) in
+        managerContext.loginManager.login(session: URLSession.shared, username: "user", password: "password") { (data, error) in
             receivedError = error
             urlExpectation.fulfill()
         }
@@ -36,7 +36,7 @@ class LoginManagerIntegrationTest: XCTestCase {
     func testRightCredentials() {
         let urlExpectation = expectation(description: "URL Response")
         var receivedError: LoginError?
-        loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "123456") { (data, error) in
+        managerContext.loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "123456") { (data, error) in
             receivedError = error
             urlExpectation.fulfill()
         }
@@ -49,7 +49,7 @@ class LoginManagerIntegrationTest: XCTestCase {
     func testTooShortPassword() {
         let urlExpectation = expectation(description: "URL Response")
         var receivedError: LoginError?
-        loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "") { (data, error) in
+        managerContext.loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "") { (data, error) in
             receivedError = error
             urlExpectation.fulfill()
         }
@@ -61,7 +61,7 @@ class LoginManagerIntegrationTest: XCTestCase {
     func testRightCredentialsWithToken() {
         let urlExpectation = expectation(description: "URL Response")
         var receivedData: Data?
-        loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "123456") { (data, error) in
+        managerContext.loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "123456") { (data, error) in
             receivedData = data
             urlExpectation.fulfill()
         }
@@ -75,15 +75,14 @@ class LoginManagerIntegrationTest: XCTestCase {
     }
     
     func testRightCredentialsWithCompanyTimeZoneName() {
-        let jsonManager = JsonManager()
         let urlExpectation = expectation(description: "URL Response")
         var receivedData: Data?
-        loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "123456") { (data, error) in
+        managerContext.loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "123456") { (data, error) in
             receivedData = data
             urlExpectation.fulfill()
         }
         waitForExpectations(timeout: 20, handler: nil)
-        guard let data = receivedData, let json = jsonManager.parse(data: data) else {
+        guard let data = receivedData, let json = managerContext.jsonManager.parse(data: data) else {
             XCTFail()
             return
         }

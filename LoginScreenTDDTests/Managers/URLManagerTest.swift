@@ -12,10 +12,10 @@ import XCTest
 
 class URLManagerTest: XCTestCase {
     
-    var urlManager: URLManager!
+    var managerContext: ManagerContext!
 
     override func setUp() {
-        urlManager = URLManager()
+        managerContext = ManagerContext()
     }
 
     override func tearDown() {
@@ -23,7 +23,7 @@ class URLManagerTest: XCTestCase {
     }
 
     func testLoginURL() {
-        let url = urlManager.loginURL()
+        let url = managerContext.urlManager.loginURL()
         XCTAssertEqual(url.absoluteString, "https://brighthr-api-uat.azurewebsites.net/api/Account/PostValidateUser")
     }
 

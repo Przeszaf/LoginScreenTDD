@@ -8,7 +8,8 @@
 
 import Foundation
 
-class HttpManager {
+class HttpManager: Manager {
+    
     func createPostRequest(url: URL, parameters: [String: String]?, httpHeadersArray: [(value: String, httpHeaderField: String)]?) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -23,7 +24,7 @@ class HttpManager {
         return request
     }
     
-    func get(session: URLSessionProtocol = URLSession.shared, request: URLRequest, completionHandler: @escaping ((Data?, URLResponse?, Error?) -> Void)) {
+    func get(session: URLSessionProtocol, request: URLRequest, completionHandler: @escaping ((Data?, URLResponse?, Error?) -> Void)) {
         let task = session.dataTask(with: request) { (data, response, error) in
             completionHandler(data, response, error)
         }

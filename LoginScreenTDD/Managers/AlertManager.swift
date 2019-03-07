@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AlertManager {
+class AlertManager: Manager {
+    
     
     var Action = UIAlertAction.self
     var AlertController = UIAlertController.self

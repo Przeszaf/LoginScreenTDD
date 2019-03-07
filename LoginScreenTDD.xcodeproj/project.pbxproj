@@ -47,6 +47,8 @@
 		0CD486522231BB4000C2D478 /* LoadingButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486512231BB4000C2D478 /* LoadingButtonTest.swift */; };
 		0CD486542231BB7700C2D478 /* LoginTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486532231BB7700C2D478 /* LoginTextFieldTest.swift */; };
 		0CD486562231BB9300C2D478 /* LoginTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486552231BB9300C2D478 /* LoginTextFieldTest.swift */; };
+		0CD486582231BBE800C2D478 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486572231BBE800C2D478 /* Manager.swift */; };
+		0CD4865A2231BC0600C2D478 /* ManagerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486592231BC0600C2D478 /* ManagerContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		0CD486512231BB4000C2D478 /* LoadingButtonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonTest.swift; sourceTree = "<group>"; };
 		0CD486532231BB7700C2D478 /* LoginTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldTest.swift; sourceTree = "<group>"; };
 		0CD486552231BB9300C2D478 /* LoginTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldTest.swift; sourceTree = "<group>"; };
+		0CD486572231BBE800C2D478 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		0CD486592231BC0600C2D478 /* ManagerContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,11 +236,13 @@
 		0C9DD482222EC47500F95514 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0CD486572231BBE800C2D478 /* Manager.swift */,
 				0C9DD483222EC47D00F95514 /* JsonManager.swift */,
 				0C9DD48D222EDEF400F95514 /* AlertManager.swift */,
 				0CD4860F2231B48100C2D478 /* HttpManager.swift */,
 				0CD486212231B59C00C2D478 /* LoginManager.swift */,
 				0CD486312231B8B400C2D478 /* URLManager.swift */,
+				0CD486592231BC0600C2D478 /* ManagerContext.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -507,6 +513,8 @@
 				0C9DD440222EBD9700F95514 /* AppDelegate.swift in Sources */,
 				0CD486122231B4A000C2D478 /* URLRequestExtension.swift in Sources */,
 				0C9DD448222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld in Sources */,
+				0CD486582231BBE800C2D478 /* Manager.swift in Sources */,
+				0CD4865A2231BC0600C2D478 /* ManagerContext.swift in Sources */,
 				0CD4861A2231B4D600C2D478 /* URLSessionDataTaskProtocol.swift in Sources */,
 				0CD486292231B5F200C2D478 /* Constants.swift in Sources */,
 			);

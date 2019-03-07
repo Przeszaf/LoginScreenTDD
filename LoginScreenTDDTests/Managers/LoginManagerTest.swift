@@ -10,10 +10,10 @@ import XCTest
 @testable import LoginScreenTDD
 
 class LoginManagerTest: XCTestCase {
-    var loginManager: LoginManager!
+    var managerContext: ManagerContext!
     
     override func setUp() {
-        loginManager = LoginManager()
+        managerContext = ManagerContext()
     }
     
     override func tearDown() {
@@ -24,7 +24,7 @@ class LoginManagerTest: XCTestCase {
         let mockURLSession = URLSessionMock()
         mockURLSession.mockResponse = HTTPURLResponse(url: URL(string: "MockUrl")!, statusCode: 403, httpVersion: nil, headerFields: nil)
         var receivedError: LoginError?
-        loginManager.login(session: mockURLSession, username: "WrongUsername", password: "WrongPassword", completionHandler: { (data, error) in
+        managerContext.loginManager.login(session: mockURLSession, username: "WrongUsername", password: "WrongPassword", completionHandler: { (data, error) in
             receivedError = error
         })
         XCTAssertEqual(receivedError, .invalidCredentials)
@@ -42,10 +42,11 @@ class LoginManagerTest: XCTestCase {
         var receivedError: LoginError?
         var receivedData: Data?
         
-        loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error) in
+        managerContext.loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error) in
             receivedError = error
             receivedData = data
         })
+        
         guard let data = receivedData,
             let json = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as? [String: Any] else {
             XCTFail()
@@ -60,7 +61,7 @@ class LoginManagerTest: XCTestCase {
         let mockURLSession = URLSessionMock()
         mockURLSession.mockResponse = HTTPURLResponse(url: URL(string: "AnyUrl")!, statusCode: 123, httpVersion: nil, headerFields: nil)
         var receivedError: LoginError?
-        loginManager.login(session: mockURLSession, username: "WrongUsername", password: "WrongPassword", completionHandler: { (data, error) in
+        managerContext.loginManager.login(session: mockURLSession, username: "WrongUsername", password: "WrongPassword", completionHandler: { (data, error) in
             receivedError = error
         })
         XCTAssertEqual(receivedError, .unknown)
@@ -76,7 +77,17 @@ class LoginManagerTest: XCTestCase {
         mockURLSession.mockData = try? Data(contentsOf: URL(fileURLWithPath: path))
         
         
-        loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error) in })
-        XCTAssertEqual(loginManager.token, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjI1MDUwLCJDb21wYW55SWQiOjIyODQ2LCJFeHBpcnlEYXRlIjoiXC9EYXRlKDE1MDc3Njc2ODE4ODkpXC8ifQ.PNM143ErUvcEfxr0c9bS0vD_wMmMrpYdVkk0YLpHLOk")
+        managerContext.loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error)
+            in
+            guard let data = data else {
+                XCTFail()
+                return
+            }
+            self.managerContext.loginManager.saveToken(data: data)
+        })
+        
+        
+        
+        XCTAssertEqual(managerContext.loginManager.token, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjI1MDUwLCJDb21wYW55SWQiOjIyODQ2LCJFeHBpcnlEYXRlIjoiXC9EYXRlKDE1MDc3Njc2ODE4ODkpXC8ifQ.PNM143ErUvcEfxr0c9bS0vD_wMmMrpYdVkk0YLpHLOk")
     }
 }

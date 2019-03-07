@@ -10,10 +10,10 @@ import XCTest
 @testable import LoginScreenTDD
 
 class AlertManagerTest: XCTestCase {
-    var alertManager: AlertManager!
+    var managerContext: ManagerContext!
 
     override func setUp() {
-        alertManager = AlertManager()
+        managerContext = ManagerContext()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
@@ -22,23 +22,23 @@ class AlertManagerTest: XCTestCase {
     }
     
     func testReturnsAlert() {
-        let alert = alertManager.alert(title: "Title", message: "Message", okayHandler: nil)
+        let alert = managerContext.alertManager.alert(title: "Title", message: "Message", okayHandler: nil)
         XCTAssertNotNil(alert)
     }
     
     func testReturnsAlertWithTitle() {
-        let alert = alertManager.alert(title: "Some title", message: nil, okayHandler: nil)
+        let alert = managerContext.alertManager.alert(title: "Some title", message: nil, okayHandler: nil)
         XCTAssertEqual(alert.title, "Some title")
     }
     
     func testReturnsAlertWithMessage() {
-        let alert = alertManager.alert(title: nil, message: "Some message", okayHandler: nil)
+        let alert = managerContext.alertManager.alert(title: nil, message: "Some message", okayHandler: nil)
         XCTAssertEqual(alert.message, "Some message")
     }
     
     
     func testReturnsAlertWithOkayHandler() {
-        let alertManager = AlertManager()
+        let alertManager = AlertManager(managerContext: ManagerContext())
         alertManager.Action = UIAlertActionMock.self
         alertManager.AlertController = UIAlertControllerMock.self
         let alert = alertManager.alert(title: nil, message: nil, okayHandler: { (action) in }) as? UIAlertControllerMock
