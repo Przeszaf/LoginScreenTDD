@@ -6,9 +6,13 @@
 //  Copyright © 2019 Przemyslaw Szafulski. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Constants {
+    
+    struct LoginScreen {
+        static let loginFieldColor = UIColor.lightGray
+    }
     
     struct LoginManager {
         static let httpHeadersArray = [("application/x-www-form-urlencoded", "Content-Type")]

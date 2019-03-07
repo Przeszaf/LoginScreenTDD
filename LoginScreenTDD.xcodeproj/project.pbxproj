@@ -45,6 +45,8 @@
 		0CD486492231B9C700C2D478 /* LoginManagerIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486482231B9C700C2D478 /* LoginManagerIntegrationTest.swift */; };
 		0CD4864F2231BB2F00C2D478 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4864E2231BB2F00C2D478 /* LoadingButton.swift */; };
 		0CD486522231BB4000C2D478 /* LoadingButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486512231BB4000C2D478 /* LoadingButtonTest.swift */; };
+		0CD486542231BB7700C2D478 /* LoginTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486532231BB7700C2D478 /* LoginTextFieldTest.swift */; };
+		0CD486562231BB9300C2D478 /* LoginTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486552231BB9300C2D478 /* LoginTextFieldTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		0CD486482231B9C700C2D478 /* LoginManagerIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManagerIntegrationTest.swift; sourceTree = "<group>"; };
 		0CD4864E2231BB2F00C2D478 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		0CD486512231BB4000C2D478 /* LoadingButtonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonTest.swift; sourceTree = "<group>"; };
+		0CD486532231BB7700C2D478 /* LoginTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldTest.swift; sourceTree = "<group>"; };
+		0CD486552231BB9300C2D478 /* LoginTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				0CD4864E2231BB2F00C2D478 /* LoadingButton.swift */,
+				0CD486552231BB9300C2D478 /* LoginTextFieldTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				0CD486512231BB4000C2D478 /* LoadingButtonTest.swift */,
+				0CD486532231BB7700C2D478 /* LoginTextFieldTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 				0CD486102231B48100C2D478 /* HttpManager.swift in Sources */,
 				0C9DD4A9222EF3C700F95514 /* UIAlertActionExtension.swift in Sources */,
 				0CD486322231B8B400C2D478 /* URLManager.swift in Sources */,
+				0CD486562231BB9300C2D478 /* LoginTextFieldTest.swift in Sources */,
 				0C9DD442222EBD9700F95514 /* ViewController.swift in Sources */,
 				0CD486272231B5D600C2D478 /* LoginError.swift in Sources */,
 				0C9DD49C222EEC9600F95514 /* UIAlertControllerMock.swift in Sources */,
@@ -515,6 +522,7 @@
 				0CD4860E2231B46500C2D478 /* HttpManagerTest.swift in Sources */,
 				0C9DD495222EE33E00F95514 /* UIAlertActionMock.swift in Sources */,
 				0C9DD480222EC41C00F95514 /* JsonManagerTest.swift in Sources */,
+				0CD486542231BB7700C2D478 /* LoginTextFieldTest.swift in Sources */,
 				0CD486362231B8F800C2D478 /* URLManagerTest.swift in Sources */,
 				0C9DD493222EE29E00F95514 /* UIAlertControllerMock.swift in Sources */,
 				0C9DD4AC222EF77B00F95514 /* UIAlertActionExtension.swift in Sources */,
