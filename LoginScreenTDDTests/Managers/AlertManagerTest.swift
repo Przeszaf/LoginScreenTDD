@@ -22,7 +22,7 @@ class AlertManagerTest: XCTestCase {
     }
     
     func testReturnsAlert() {
-        let alert = alertManager.alert(title: nil, message: nil, okayHandler: nil)
+        let alert = alertManager.alert(title: "Title", message: "Message", okayHandler: nil)
         XCTAssertNotNil(alert)
     }
     
@@ -42,7 +42,7 @@ class AlertManagerTest: XCTestCase {
         alertManager.Action = UIAlertActionMock.self
         alertManager.AlertController = UIAlertControllerMock.self
         let alert = alertManager.alert(title: nil, message: nil, okayHandler: { (action) in }) as? UIAlertControllerMock
-        let action = alert?.okayAction as? UIAlertActionMock
+        let action = alert?.okayAction
         
         XCTAssertNotNil(action?.handler)
     }
