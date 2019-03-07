@@ -33,5 +33,10 @@ class LoginManager: Manager {
         token = value
     }
     
+    func getTimezone(data: Data) -> String? {
+        guard let json = managerContext.jsonManager.parse(data: data) else { return nil }
+        return json.value(keyPath: "companyTimeZoneName")
+    }
+    
     
 }
