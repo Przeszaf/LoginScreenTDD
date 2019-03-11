@@ -11,7 +11,7 @@ import UIKit
 struct Constants {
     
     struct LoginScreen {
-        static let loginFieldColor = UIColor.white
+        static let loginFieldTextColor = UIColor.white
     }
     
     struct LoginManager {

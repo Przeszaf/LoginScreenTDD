@@ -12,7 +12,7 @@ class LoginTextField: UITextField {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.textColor = Constants.LoginScreen.loginFieldColor
+        self.textColor = Constants.LoginScreen.loginFieldTextColor
     }
     
     override init(frame: CGRect) {
@@ -22,17 +22,15 @@ class LoginTextField: UITextField {
     override var placeholder: String? {
         willSet {
             guard let newValue = newValue else { return }
-            attributedPlaceholder = NSAttributedString(string: newValue, attributes: [NSAttributedString.Key.foregroundColor: Constants.LoginScreen.loginFieldColor])
+            attributedPlaceholder = NSAttributedString(string: newValue, attributes: [NSAttributedString.Key.foregroundColor: Constants.LoginScreen.loginFieldTextColor])
         }
     }
-    
-    
     
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         path.move(to: CGPoint(x: bounds.minX, y: bounds.maxY))
         path.addLine(to: CGPoint(x: bounds.maxX, y: bounds.maxY))
-        Constants.LoginScreen.loginFieldColor.setStroke()
+        Constants.LoginScreen.loginFieldTextColor.setStroke()
         path.lineWidth = 2
         path.stroke()
         

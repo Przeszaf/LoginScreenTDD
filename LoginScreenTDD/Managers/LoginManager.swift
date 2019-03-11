@@ -14,8 +14,8 @@ class LoginManager: Manager {
     
     func login(session: URLSessionProtocol, username: String, password: String, completionHandler: @escaping ((Data?, LoginError?) -> Void)) {
         let request = managerContext.httpManager.createPostRequest(url: managerContext.urlManager.loginURL(),
-                                                    parameters: [Constants.LoginManager.usernameParameterKey: username, Constants.LoginManager.passwordParameterKey: password],
-                                                    httpHeadersArray: Constants.LoginManager.httpHeadersArray)
+                                                                   parameters: [Constants.LoginManager.usernameParameterKey: username, Constants.LoginManager.passwordParameterKey: password],
+                                                                   httpHeadersArray: Constants.LoginManager.httpHeadersArray)
         managerContext.httpManager.get(session: session, request: request) { (data, response, error)  in
             if let response = response as? HTTPURLResponse {
                 completionHandler(data, LoginError.check(errorCode: response.statusCode))
