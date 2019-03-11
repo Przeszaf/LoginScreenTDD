@@ -10,6 +10,8 @@ import Foundation
 
 class ManagerContext {
     
+    static let sharedInstance = ManagerContext()
+    
     lazy var jsonManager = {
         JsonManager(managerContext: self)
     }()

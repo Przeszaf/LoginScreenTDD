@@ -14,7 +14,7 @@ class LoginManagerIntegrationTest: XCTestCase {
     var managerContext: ManagerContext!
     
     override func setUp() {
-        managerContext = ManagerContext()
+        managerContext = ManagerContext.sharedInstance
     }
     
     override func tearDown() {

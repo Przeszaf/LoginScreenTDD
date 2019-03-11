@@ -23,7 +23,7 @@ class LoginTextFieldTest: XCTestCase {
     
     func testPlaceholderWithAttributes() {
         loginTextField.placeholder = "TEST"
-        let attributedText = NSAttributedString(string: loginTextField.placeholder!, attributes: [.foregroundColor: Constants.LoginScreen.loginFieldColor])
+        let attributedText = NSAttributedString(string: loginTextField.placeholder!, attributes: [.foregroundColor: Constants.LoginScreen.loginFieldTextColor])
         XCTAssertEqual(attributedText, loginTextField.attributedPlaceholder)
     }
 }

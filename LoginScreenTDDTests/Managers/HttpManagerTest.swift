@@ -15,7 +15,7 @@ class HttpManagerTest: XCTestCase {
     var url: URL!
     
     override func setUp() {
-        managerContext = ManagerContext()
+        managerContext = ManagerContext.sharedInstance
         guard let url = URL(string: "www.google.com") else {
             XCTFail()
             return

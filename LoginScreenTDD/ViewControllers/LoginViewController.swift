@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     var managerContext: ManagerContext!
+    let managerContext = ManagerContext.sharedInstance
     
     @IBOutlet weak private var loginTextField: LoginTextField!
     @IBOutlet weak private var passwordTextField: LoginTextField!
