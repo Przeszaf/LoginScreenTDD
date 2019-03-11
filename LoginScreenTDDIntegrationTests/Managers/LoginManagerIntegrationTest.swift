@@ -60,18 +60,12 @@ class LoginManagerIntegrationTest: XCTestCase {
     
     func testRightCredentialsWithToken() {
         let urlExpectation = expectation(description: "URL Response")
-        var receivedData: Data?
         managerContext.loginManager.login(session: URLSession.shared, username: "c_emp1@grr.la", password: "123456") { (data, error) in
-            receivedData = data
             urlExpectation.fulfill()
         }
         waitForExpectations(timeout: 20, handler: nil)
-        guard let data = receivedData, let json = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as? [String: Any] else {
-            XCTFail()
-            return
-        }
         
-        XCTAssertNotNil(json)
+        XCTAssertNotNil(managerContext.loginManager.token)
     }
     
     func testRightCredentialsWithCompanyTimeZoneName() {
