@@ -12,7 +12,6 @@
 		0C9DD448222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD446222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld */; };
 		0C9DD44A222EBD9800F95514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9DD449222EBD9800F95514 /* Assets.xcassets */; };
 		0C9DD44D222EBD9800F95514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9DD44B222EBD9800F95514 /* LaunchScreen.storyboard */; };
-		0C9DD463222EBD9900F95514 /* LoginScreenTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD462222EBD9900F95514 /* LoginScreenTDDUITests.swift */; };
 		0C9DD480222EC41C00F95514 /* JsonManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD47F222EC41C00F95514 /* JsonManagerTest.swift */; };
 		0C9DD484222EC47D00F95514 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD483222EC47D00F95514 /* JsonManager.swift */; };
 		0C9DD489222EC7D100F95514 /* DictionaryExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DD488222EC7D100F95514 /* DictionaryExtensionTest.swift */; };
@@ -49,7 +48,10 @@
 		0CD486582231BBE800C2D478 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486572231BBE800C2D478 /* Manager.swift */; };
 		0CD4865A2231BC0600C2D478 /* ManagerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD486592231BC0600C2D478 /* ManagerContext.swift */; };
 		0CD486602231C39500C2D478 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4865F2231C39500C2D478 /* LoginViewController.swift */; };
+		C01A8DAF22366D340050614A /* ConstantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07404CC2236685500A0D6AC /* ConstantsUITests.swift */; };
 		C07404CB223667E600A0D6AC /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07404CA223667E600A0D6AC /* LoginButton.swift */; };
+		C07404CD2236685500A0D6AC /* ConstantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07404CC2236685500A0D6AC /* ConstantsUITests.swift */; };
+		C07404CF223668CC00A0D6AC /* LoginViewControlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07404CE223668CC00A0D6AC /* LoginViewControlerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +89,6 @@
 		0C9DD453222EBD9900F95514 /* LoginScreenTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9DD459222EBD9900F95514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9DD45E222EBD9900F95514 /* LoginScreenTDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenTDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C9DD462222EBD9900F95514 /* LoginScreenTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTDDUITests.swift; sourceTree = "<group>"; };
 		0C9DD464222EBD9900F95514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9DD47F222EC41C00F95514 /* JsonManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManagerTest.swift; sourceTree = "<group>"; };
 		0C9DD483222EC47D00F95514 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
@@ -125,6 +126,8 @@
 		0CD486592231BC0600C2D478 /* ManagerContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerContext.swift; sourceTree = "<group>"; };
 		0CD4865F2231C39500C2D478 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C07404CA223667E600A0D6AC /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		C07404CC2236685500A0D6AC /* ConstantsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUITests.swift; sourceTree = "<group>"; };
+		C07404CE223668CC00A0D6AC /* LoginViewControlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControlerUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,7 @@
 				0C9DD446222EBD9700F95514 /* LoginScreenTDD.xcdatamodeld */,
 				0CD4862A2231B65800C2D478 /* response.json */,
 				0CD486282231B5F200C2D478 /* Constants.swift */,
+				C07404CC2236685500A0D6AC /* ConstantsUITests.swift */,
 			);
 			path = LoginScreenTDD;
 			sourceTree = "<group>";
@@ -216,8 +220,8 @@
 		0C9DD461222EBD9900F95514 /* LoginScreenTDDUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0C9DD462222EBD9900F95514 /* LoginScreenTDDUITests.swift */,
 				0C9DD464222EBD9900F95514 /* Info.plist */,
+				C07404CE223668CC00A0D6AC /* LoginViewControlerUITests.swift */,
 			);
 			path = LoginScreenTDDUITests;
 			sourceTree = "<group>";
@@ -435,6 +439,7 @@
 					};
 					0C9DD45D222EBD9900F95514 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 0C9DD43B222EBD9700F95514;
 					};
 					0CD4863A2231B98D00C2D478 = {
@@ -529,6 +534,7 @@
 				0CD4865A2231BC0600C2D478 /* ManagerContext.swift in Sources */,
 				0CD4861A2231B4D600C2D478 /* URLSessionDataTaskProtocol.swift in Sources */,
 				0CD486292231B5F200C2D478 /* Constants.swift in Sources */,
+				C07404CD2236685500A0D6AC /* ConstantsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +562,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9DD463222EBD9900F95514 /* LoginScreenTDDUITests.swift in Sources */,
+				C07404CF223668CC00A0D6AC /* LoginViewControlerUITests.swift in Sources */,
+				C01A8DAF22366D340050614A /* ConstantsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +816,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH34GD9XC3;
 				INFOPLIST_FILE = LoginScreenTDDUITests/Info.plist;
@@ -819,6 +827,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.przeszaf.LoginScreenTDDUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LoginScreenTDD;
@@ -829,6 +838,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH34GD9XC3;
 				INFOPLIST_FILE = LoginScreenTDDUITests/Info.plist;
