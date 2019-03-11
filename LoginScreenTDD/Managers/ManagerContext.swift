@@ -12,23 +12,23 @@ class ManagerContext {
     
     static let sharedInstance = ManagerContext()
     
-    lazy var jsonManager = {
+    private(set) lazy var jsonManager = {
         JsonManager(managerContext: self)
     }()
     
-    lazy var urlManager = {
+    private(set) lazy var urlManager = {
         URLManager(managerContext: self)
     }()
     
-    lazy var httpManager = {
+    private(set) lazy var httpManager = {
         HttpManager(managerContext: self)
     }()
     
-    lazy var loginManager = {
+    private(set) lazy var loginManager = {
         LoginManager(managerContext: self)
     }()
     
-    lazy var alertManager = {
+    private(set) lazy var alertManager = {
         AlertManager(managerContext: self)
     }()
     
