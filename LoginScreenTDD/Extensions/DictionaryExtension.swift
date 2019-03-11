@@ -22,18 +22,17 @@ extension Dictionary where Key == String {
     }
     
     func value<T: Any>(keyPath: String) -> T? {
-        var components = keyPath.split(separator: ".")
+        var components = keyPath.split(separator: ".").map{String($0)}
         guard let firstComponent = components.first else { return nil }
-        let firstComponentString = String(firstComponent)
-        if let insideDict = self[firstComponentString] as? [String: Any] {
+        if let insideDict = self[firstComponent] as? [String: Any] {
             components.removeFirst()
             if (components.count == 0) {
                 return insideDict as? T
             }
             return insideDict.value(keyPath: components.joined(separator: "."))
         } else {
-            guard self[firstComponentString] != nil else { return nil }
-            return self[firstComponentString] as? T
+            guard self[firstComponent] != nil else { return nil }
+            return self[firstComponent] as? T
         }
     }
 }
