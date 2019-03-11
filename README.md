@@ -1,6 +1,6 @@
 # LoginScreenTDD
 
-Hey, this is my first take on TDD. All things in the app are my first take on unit, integration and UI testing. I know that there are some things that are probably not perfect, such as naming or too many/few tests for certain functions. 
+Hey, this is my first take on TDD. All things in the app are my first try on unit, integration and UI testing. I know that there are some things that are probably not perfect, such as naming or too many/few tests for certain functions. 
 
 Usually I use branching while using git, but for this project I think it would be an overkill. Also, at the beginning I was commiting after each passed test, but afterwards I started commiting new features with tests included, as the repo would have a lot of commits otherwise.
 
