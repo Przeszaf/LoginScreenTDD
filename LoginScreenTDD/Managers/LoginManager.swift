@@ -20,10 +20,10 @@ class LoginManager: Manager {
             self?.saveToken(data: data)
             if let response = response as? HTTPURLResponse {
                 completionHandler(data, LoginError.check(errorCode: response.statusCode))
-            } else if let error = error as? LoginError {
-                completionHandler(data, error)
-            } else {
+            } else if let data = data {
                 completionHandler(data, nil)
+            } else {
+                completionHandler(nil, LoginError.unknown)
             }
         }
     }

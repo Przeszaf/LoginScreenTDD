@@ -80,4 +80,15 @@ class LoginManagerTest: XCTestCase {
         managerContext.loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error) in })
         XCTAssertEqual(managerContext.loginManager.token, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjI1MDUwLCJDb21wYW55SWQiOjIyODQ2LCJFeHBpcnlEYXRlIjoiXC9EYXRlKDE1MDc3Njc2ODE4ODkpXC8ifQ.PNM143ErUvcEfxr0c9bS0vD_wMmMrpYdVkk0YLpHLOk")
     }
+    
+    func testLoginWeirdError() {
+        let mockURLSession = URLSessionMock()
+        mockURLSession.mockError = NSError(domain: "WERIRD", code: 123123213, userInfo: nil)
+        
+        var receivedError: LoginError?
+        managerContext.loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error) in
+            receivedError = error
+        })
+        XCTAssertEqual(receivedError, .unknown)
+    }
 }
