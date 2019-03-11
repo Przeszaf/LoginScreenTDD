@@ -40,7 +40,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     }
     
-    @IBAction func logIn(button: UIButton) {
+    @IBAction func loginPressed(button: UIButton) {
         guard let login = loginTextField.text, let pass = passwordTextField.text else { return }
         loginButton.startLoading(style: .white)
         managerContext.loginManager.login(session: URLSession.shared, username: login, password: pass) { [weak self] (data, error) in
@@ -48,16 +48,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self?.loginButton.stopLoading()
             }
             if let error = error {
-                self?.handle(error: error)
+                self?.showErrorMessage(error: error)
             } else if let data = data {
-                self?.loginAndSaveToken(data: data)
+                self?.showLoginMessage(data: data)
             }
         }
     }
     
     
     
-    private func handle(error: LoginError) {
+    private func showErrorMessage(error: LoginError) {
         let text: String = {
             switch error {
             case .invalidCredentials:
@@ -77,7 +77,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    private func loginAndSaveToken(data: Data) {
+    private func showLoginMessage(data: Data) {
         DispatchQueue.main.async {
             let text = self.managerContext.loginManager.getTimezone(data: data)
             let message = (text != nil) ? "Welcome to \(text!)" : "Sorry, something has gone wrong. Please try again."
@@ -89,7 +89,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             alert.view.accessibilityIdentifier = ConstantsUITests.LoginViewController.successAlert
             self.present(alert, animated: true, completion: nil)
         }
-        managerContext.loginManager.saveToken(data: data)
     }
     
     //MARK: - UITextFieldDelegate

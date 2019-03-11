@@ -47,7 +47,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="logInButton:" destination="5dK-k9-3aT" eventType="touchUpInside" id="HlV-l6-Oa9"/>
+                                    <action selector="loginPressedWithButton:" destination="5dK-k9-3aT" eventType="touchUpInside" id="LIS-5I-p6k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4v-zF-fCs">

@@ -77,17 +77,7 @@ class LoginManagerTest: XCTestCase {
         mockURLSession.mockData = try? Data(contentsOf: URL(fileURLWithPath: path))
         
         
-        managerContext.loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error)
-            in
-            guard let data = data else {
-                XCTFail()
-                return
-            }
-            self.managerContext.loginManager.saveToken(data: data)
-        })
-        
-        
-        
+        managerContext.loginManager.login(session: mockURLSession, username: "user@mail.com", password: "pass", completionHandler: { (data, error) in })
         XCTAssertEqual(managerContext.loginManager.token, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjI1MDUwLCJDb21wYW55SWQiOjIyODQ2LCJFeHBpcnlEYXRlIjoiXC9EYXRlKDE1MDc3Njc2ODE4ODkpXC8ifQ.PNM143ErUvcEfxr0c9bS0vD_wMmMrpYdVkk0YLpHLOk")
     }
 }

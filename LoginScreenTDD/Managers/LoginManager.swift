@@ -9,14 +9,15 @@
 import Foundation
 
 class LoginManager: Manager {
-    
+    var session: URLSessionProtocol = URLSession.shared
     var token: String?
     
     func login(session: URLSessionProtocol, username: String, password: String, completionHandler: @escaping ((Data?, LoginError?) -> Void)) {
         let request = managerContext.httpManager.createPostRequest(url: managerContext.urlManager.loginURL(),
                                                                    parameters: [Constants.LoginManager.usernameParameterKey: username, Constants.LoginManager.passwordParameterKey: password],
                                                                    httpHeadersArray: Constants.LoginManager.httpHeadersArray)
-        managerContext.httpManager.get(session: session, request: request) { (data, response, error)  in
+        managerContext.httpManager.get(session: session, request: request) { [weak self] (data, response, error)  in
+            self?.saveToken(data: data)
             if let response = response as? HTTPURLResponse {
                 completionHandler(data, LoginError.check(errorCode: response.statusCode))
             } else if let error = error as? LoginError {
@@ -27,8 +28,8 @@ class LoginManager: Manager {
         }
     }
     
-    func saveToken(data: Data) {
-        guard let json = managerContext.jsonManager.parse(data: data) else { return }
+    private func saveToken(data: Data?) {
+        guard let data = data, let json = managerContext.jsonManager.parse(data: data) else { return }
         let value: String? = json.value(keyPath: "token.token")
         token = value
     }
